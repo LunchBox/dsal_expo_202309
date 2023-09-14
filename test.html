@@ -12,12 +12,7 @@
     <title>Test</title>
 </head>
 <body>
-	<a-scene gltf-model="dracoDecoderPath: ./"
-					 mindar-image="imageTargetSrc: ./card2.mind; maxTrack: 4;" 
-					 color-space="sRGB"																																									 
-					 renderer="colorManagement: true, physicallyCorrectLights" 
-					 vr-mode-ui="enabled: false"
-					 device-orientation-permission-ui="enabled: false">
+	<a-scene gltf-model="dracoDecoderPath: ./" mindar-image="imageTargetSrc: ./card2.mind; maxTrack: 4;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
 		<a-assets>
 			<!-- <video id="v1" autoplay loop="true" src="GokurakuJodo.mp4"></video> -->
@@ -49,13 +44,9 @@
 			<a-plane src="#card4-2" position="0.5 0 0" height="1.777" width="1" rotation="0 0 0"></a-plane>
 		</a-entity>
 
-		<a-entity position="0 0 -1.5" text="align: center;
-                width: 6;
-                wrapCount: 100;
-                color: white;
-                value: Click or tap to start video" hide-on-play="#videoFireworks">
-</a-entity>
-	</a-scene>
+    <a-entity position="0 1 0" text="align: center; width: 6; wrapCount: 100; color: white; value: Click or tap to start video" hide-on-play="#videoFireworks">
+    </a-entity>
+  </a-scene>
 </body>
 
 </html>
