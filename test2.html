@@ -17,7 +17,6 @@
     <title>Test</title>
 </head>
 <body style="margin: 0;">
-	<!-- <div id="app" style="width: 100vw; height: 100vh; position: relative; overflow: hidden;"> -->
 		<a-scene gltf-model="dracoDecoderPath: ./" mindar-image="imageTargetSrc: ./card2.mind; maxTrack: 4;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
 			<a-assets>
@@ -58,9 +57,10 @@
 			</a-entity> -->
 
 		</a-scene>
-	<!-- </div> -->
 
-	<!-- <script>
+		<div style="position: fixed; top: 0; left: 0;">{{message}}</div>
+
+	<script>
 		const { createApp, ref } = Vue;
 
 		const app = createApp({
@@ -72,10 +72,10 @@
 			}
 		});
 
-		app.use(AFRAME);
+		// app.use(AFRAME);
 
-		app.mount("#app");
-	</script> -->
+		app.mount(document.querySelector("body"));
+	</script>
 </body>
 
 </html>
