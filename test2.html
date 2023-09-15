@@ -24,6 +24,11 @@
 				<video id="videoFireworks" preload="auto" src="./GokurakuJodo.mp4" width="160" height="90" webkit-playsinline playsinline loop muted></video>
 
 				<img id="my-image" src="https://hiukim.github.io/mind-ar-js-doc/assets/images/raccoon-2ef571baece2ee4724d0d19edf3de791.png">
+
+				<a-mixin id="spinbox" geometry="primitive: octahedron; radius: 0.4" animation__rotx="property: object3D.rotation.x; from: 0; to: 359; easing: linear; dur: 8000; loop: true" animation__roty="property: object3D.rotation.y; from: 0; to: 359; easing: linear; dur: 10000; loop: true"></a-mixin>
+				<a-mixin id="label" text="color: black; align: center; baseline: center; anchor: center; wrapCount: 75"></a-mixin>
+
+				<a-mixin id="anime" animation="property: position; from: 0 0 0; to: 4 0 0; dur: 250; easing: easeInCubic; loop: false" animation__2="property: opacity; from:0; to: 1; dur: 250; easing: easeInCubic; loop: false"></a-mixin>
 			</a-assets>
 
 			<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -56,6 +61,11 @@
 				<a-text position="0 0 0.5" rotation="90 0 0" animation="property: position; to: 0 0 0; dur: 5000; easing: linear; loop: true" value="每個字都要這樣處理才可以" font="custom-msdf.json" color="#cb4720" negate="false"></a-text>
 			</a-entity> -->
 
+			<a-entity mixin="spinbox" position="0 0 -6" material="roughness: 1"></a-entity>
+			<!--  從頂上往下看  -->
+			<a-entity>
+				<a-plane position="0 0 -0.1" rotation="0 0 0" width="4" height="2" color="#ccc"></a-plane>
+			</a-entity>
 		</a-scene>
 
 		<div style="position: fixed; top: 0; left: 0;">{{message}}</div>
