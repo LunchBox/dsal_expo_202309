@@ -36,6 +36,10 @@
 
 			<!-- <a-entity mindar-image-target="targetIndex: 0" material="shader: transparent-video; src: #videoFireworks" geometry="primitive: plane; width: 1; height: 0.563" position="0 0 0" rotation="0 0 0" play-on-click visible="false"> -->
 
+			<a-entity mindar-image-target="targetIndex: 0">
+				<a-plane position="-0.5 0 0" height="1.777" width="1" rotation="0 0 0" color="#eee;"></a-plane>
+			</a-entity>
+
 			<!-- <a-entity mindar-image-target="targetIndex: 0">
 				<a-video src="#videoFireworks" position="0.5 0 0" height="0.563" width="1" play-on-click></a-video>
 				<a-plane src="#card1" position="-0.5 0 0" height="1.777" width="1" rotation="0 0 0"></a-plane>
@@ -77,9 +81,8 @@
 					<a-entity position="0 0 0" mixin="spinbox" material="roughness: 1"></a-entity>
 
 					<a-image width="0.3" height="0.3" src="#my-image"></a-image>
-					
-					<!-- <a-video width="1" height="0.563" src="#videoFireworks"></a-image> -->
-					<a-entity mindar-image-target="targetIndex: 0" material="shader: transparent-video; src: #videoFireworks" geometry="primitive: plane; width: 1; height: 0.563" position="0 0 0.1" rotation="0 0 0" play-on-click visible="false"></a-entity>
+
+					<a-video width="1" height="0.563" src="#videoFireworks"></a-image>
 
 					<!-- fadeIn 文字 -->
 					<a-entity position="-0.5 0.25 0" rotation="0 0 0">
