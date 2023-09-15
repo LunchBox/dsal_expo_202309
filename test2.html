@@ -64,8 +64,32 @@
 			<a-entity mixin="spinbox" position="0 0 -6" material="roughness: 1"></a-entity>
 			<!--  從頂上往下看  -->
 			<a-entity>
-				<a-plane position="0 0 -0.1" rotation="0 0 0" width="4" height="2" color="#ccc"></a-plane>
+				<a-plane position="0 0 -0.1" rotation="0 0 0" width="1" height="0.5" color="#ccc"></a-plane>
 			</a-entity>
+
+			<a-entity position="0 0 0.1" rotation="45 0 0">
+				<a-plane position="0 0 -0.1" rotation="0 0 0" width="4" height="2" color="#ccc"></a-plane>
+				<a-entity position="0 0 0" mixin="spinbox" material="roughness: 1"></a-entity>
+
+				<a-image width="1" height="1" src="#my-image"></a-image>
+				<a-entity position="-2 1 0" rotation="0 0 0">
+					<a-entity v-for="i in 5" :position="`0 ${i * -0.3} 0`">
+						<a-text :value="message" color="#cb4720" negate="true" opacity="0" mixin="anime" :animation="`delay: ${250 * i};`" :animation__2="`delay: ${250 * i};`"></a-text>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+
+			<a-entity position="0 0 0.1">
+				<a-entity v-for="i in 12" :rotation="`0 0 ${-30 * i}`">
+					<a-entity position="-3 0 0">
+						<a-entity rotation="85 0 0">
+							<a-image width="1" height="1" src="#my-image"></a-image>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+
+
 		</a-scene>
 
 		<div style="position: fixed; top: 0; left: 0;">{{message}}</div>
