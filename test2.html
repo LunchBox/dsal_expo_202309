@@ -70,12 +70,14 @@
 
 			<!-- 中間展區 -->
 			<a-entity position="0 0 0.1" rotation="45 0 0">
-				<a-plane position="0 0 0" rotation="0 0 0" width="1" height="0.5" color="#ccc"></a-plane>
+				<a-plane position="0 0 0" rotation="0 0 0" width="1.2" height="0.5" color="#ccc"></a-plane>
 				<!-- <a-entity mindar-image-target="targetIndex: 0" material="shader: transparent-video; src: #videoFireworks" geometry="primitive: plane; width: 1; height: 0.563"  play-on-click visible="false"> -->
 
 				<a-entity position="0 0 0" mixin="spinbox" material="roughness: 1"></a-entity>
 
 				<a-image width="0.3" height="0.3" src="#my-image"></a-image>
+				<a-video width="1" height="0.563" src="#videoFireworks"></a-image>
+
 				<a-entity position="-0.5 0.25 0" rotation="0 0 0">
 					<a-entity v-for="i in 5" :position="`0 ${i * -0.1} 0`">
 						<a-text :value="message" color="#cb4720" negate="true" opacity="0" mixin="anime" :animation="`delay: ${250 * i};`" :animation__2="`delay: ${250 * i};`"></a-text>
